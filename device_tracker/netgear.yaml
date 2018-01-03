@@ -1,0 +1,4 @@
+- platform: netgear
+  host: !secret netgear_host
+  username: !secret netgear_user
+  password: !secret netgear_pass

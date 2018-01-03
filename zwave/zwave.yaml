@@ -1,0 +1,12 @@
+# usb_path uses /dev/serial/by-id/usb-<id>
+usb_path: !secret zwave_usb_path
+# Use the following to generate a network_key:
+# cat /dev/urandom | tr -dc '0-9A-F' | fold -w 32 | head -n 1 | sed -e 's/\(..\)/0x\1, /g' -e 's/, $//'
+network_key: !secret zwave_network_key
+device_config_glob:
+  "sensor.kitchen*":
+    ignored: true
+  "sensor.diningroom_*":
+    ignored: true
+  "sensor.frontroom_*":
+    ignored: true

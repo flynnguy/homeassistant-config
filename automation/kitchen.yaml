@@ -1,0 +1,18 @@
+- id: kitchen_lights_on
+  alias: Kitchen light on before sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-01:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.kitchen_switch
+
+- id: kitchen_lights_off
+  alias: Kitchen light off in the AM
+  trigger:
+    platform: time
+    at: '4:55:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.kitchen_switch

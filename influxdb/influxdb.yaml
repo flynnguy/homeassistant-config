@@ -1,0 +1,6 @@
+host: !secret influx_host
+username: !secret influx_user
+password: !secret influx_pass
+exclude:
+  domains:
+    - automation

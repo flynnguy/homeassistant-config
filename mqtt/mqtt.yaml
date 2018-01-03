@@ -1,0 +1,6 @@
+broker: !secret mqtt_host
+port: !secret mqtt_port
+client_id: !secret mqtt_client_id
+username: !secret mqtt_user
+password: !secret mqtt_pass
+protocol: 3.1

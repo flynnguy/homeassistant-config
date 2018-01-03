@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: "Wahoo Kickr snap"
+  state_topic: "stat/sonoff/POWER"
+  command_topic: "cmnd/sonoff/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true

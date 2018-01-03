@@ -1,0 +1,49 @@
+homeassistant:
+  name: !secret ha_name
+  latitude: !secret ha_lat
+  longitude: !secret ha_lon
+  elevation: !secret ha_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  # Customization file
+  customize: !include_dir_merge_named customize
+
+# Enables the frontend
+frontend:
+
+config:
+updater:
+# Allows you to issue voice commands from the frontend in enabled browsers
+# conversation:
+# Enables support for tracking state changes over time
+sun:
+#upnp
+discovery:
+#zeroconf:
+map:
+
+http: !include platform/http.yaml
+recorder: !include recorder/recorder.yaml
+logbook: !include logbook/logbook.yaml
+history:
+mqtt: !include mqtt/mqtt.yaml
+light: !include_dir_merge_list light
+sensor: !include_dir_merge_list sensor
+switch: !include_dir_merge_list switch
+ecobee: !include thermostat/ecobee.yaml
+binary_sensor: !include_dir_merge_list binary_sensor
+media_player: !include_dir_merge_list mediaplayer
+notify: !include_dir_merge_list notify
+#tts: !include_dir_merge_list tts
+group: !include_dir_merge_named group
+automation: !include_dir_merge_list automation
+script: !include_dir_merge_named script
+zwave: !include zwave/zwave.yaml
+camera: !include_dir_merge_list camera
+device_tracker: !include_dir_merge_list device_tracker
+zone: !include_dir_merge_list zones
+remember_the_milk: !include platform/rtm.yaml
+#google_assistant: !include google_assistant/google.yaml
+influxdb: !include influxdb/influxdb.yaml

@@ -1,0 +1,13 @@
+media_player.kitchen_home:
+  friendly_name: Google Home (Kitchen)
+  hidden: true
+media_player.bedroom:
+  friendly_name: Google Home (Bedroom)
+  hidden: true
+
+media_player.dining_room:
+  friendly_name: Sonos (Dining Room)
+media_player.kitchen:
+  friendly_name: Sonos (Kitchen)
+media_player.master_bedroom:
+  friendly_name: Sonos (Bedroom)

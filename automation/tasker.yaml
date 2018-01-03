@@ -1,0 +1,18 @@
+- id: start_trainer_road
+  alias: Start Trainer Road
+  trigger:
+    platform: mqtt
+    topic: homeassistant/tasker/trainerroad
+    payload: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.wahoo_kickr_snap
+- id: stop_trainer_road
+  alias: Stop Trainer Road
+  trigger:
+    platform: mqtt
+    topic: homeassistant/tasker/trainerroad
+    payload: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.wahoo_kickr_snap

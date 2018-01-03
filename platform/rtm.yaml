@@ -1,0 +1,4 @@
+# Remember the milk
+- name: !secret rtm_name
+  api_key: !secret rtm_api_key
+  shared_secret: !secret rtm_shared_secret

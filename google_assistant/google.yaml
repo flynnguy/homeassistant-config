@@ -1,0 +1,8 @@
+project_id: !secret google_project_id
+client_id: !secret google_client_id
+access_token: !secret google_access_token
+api_key: !secret google_api_key
+exposed_domains:
+  - switch
+  - light
+  - group

@@ -1,0 +1,19 @@
+- id: goodnight_tasker
+  alias: Goodnight tasker
+  trigger:
+    platform: mqtt
+    topic: homeassistant/tasker/goodnight
+    payload: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.bedroom
+
+- id: flux_bedroom
+  alias: Flux bedroom lights
+  trigger:
+    - platform: state
+      entity_id: light.chris_nightstand, light.nicole_nightstand, light.hue_color_light_1, light.hue_color_light_2
+      to: "on"
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.flux

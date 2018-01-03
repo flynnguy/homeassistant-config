@@ -1,0 +1,9 @@
+### Sensors
+binary_sensor.dublin_occupancy:
+  friendly_name: Diningroom motion
+binary_sensor.kitchen_occupancy:
+  friendly_name: Kitchen motion
+sensor.dublin_temperature:
+  friendly_name: Thermostat temperature
+sensor.dublin_humidity:
+  friendly_name: Thermostat humidity

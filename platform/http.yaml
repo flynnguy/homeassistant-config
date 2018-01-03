@@ -1,0 +1,5 @@
+api_password: !secret http_password
+server_port: !secret http_port
+ssl_certificate: !secret ssl_certificate
+ssl_key: !secret ssl_key
+base_url: !secret base_url

@@ -1,0 +1,56 @@
+# Turn on lights in the AM when kids are getting ready for school
+- id: diningroom_on_am
+  alias: 'Diningroom on AM'
+  trigger:
+    platform: time
+    at: '6:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.dining_room
+
+# Kids should be off to school
+- id: diningroom_off_am
+  alias: 'Diningroom off AM'
+  trigger:
+    platform: time
+    at: '8:15:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.dining_room
+
+# Turn lights on just before sunset
+- id: diningroom_on_pm
+  alias: 'Diningroom on PM'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-1:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.dining_room
+
+# Turn off lights so kids can go to sleep
+- id: diningroom_off_pm
+  alias: 'Diningroom off PM'
+  trigger:
+    platform: time
+    at: '20:45:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.dining_room

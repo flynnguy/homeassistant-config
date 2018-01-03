@@ -1,0 +1,23 @@
+- platform: bitcoin
+  currency: USD
+  entity_namespace: bitcoin
+  display_options:
+    - exchangerate
+    - number_of_transactions
+    - total_btc
+    - market_price_usd
+
+- platform: coinmarketcap
+  currency: Ethereum
+- platform: coinmarketcap
+  currency: Litecoin
+- platform: coinmarketcap
+  currency: Monero
+- platform: coinmarketcap
+  currency: Bitcoin Cash
+- platform: coinmarketcap
+  currency: Dash
+- platform: coinmarketcap
+  currency: Zcash
+- platform: coinmarketcap
+  currency: Golem

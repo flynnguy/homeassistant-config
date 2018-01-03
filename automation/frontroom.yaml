@@ -1,0 +1,22 @@
+
+# Turn on frontroom light when candle lights go out
+- id: guestroom_on
+  alias: 'Candlelights off, Guestroom light on'
+  trigger:
+    platform: time
+    at: '22:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.front_room_white
+
+- id: guestroom_off
+  alias: 'Guestroom light off'
+  trigger:
+    platform: time
+    at: '00:15'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.front_room_white
+    data:
+      transition: 300
+

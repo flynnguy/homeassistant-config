@@ -1,0 +1,4 @@
+- name: HomeAssistant
+  platform: pushover
+  api_key: !secret po_key
+  user_key: !secret po_user_key

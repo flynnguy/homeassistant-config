@@ -1,0 +1,32 @@
+# Example notifications
+- id: sunset_notification
+  alias: Sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-01:00:00'
+  action:
+    service: notify.HomeAssistant
+    data:
+      message: Sunset coming up
+
+- id: dryer_started
+  alias: Dryer started
+  trigger:
+    platform: mqtt
+    topic: homeassistant/dryer
+    payload: 'started'
+  action:
+    service: notify.HomeAssistant
+    data:
+      message: Dryer started
+- id: dryer_done
+  alias: Dryer done
+  trigger:
+    platform: mqtt
+    topic: homeassistant/dryer
+    payload: 'finished'
+  action:
+    service: notify.HomeAssistant
+    data:
+      message: Dryer finished

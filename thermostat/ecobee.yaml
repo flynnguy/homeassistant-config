@@ -1,0 +1,2 @@
+api_key: !secret ecobee_key
+hold_temp: False

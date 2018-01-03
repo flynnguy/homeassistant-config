@@ -1,0 +1,19 @@
+- id: candlelights_on
+  alias: 'Candlelights on around sunset'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.candlelight
+
+- id: candlelights_off
+  alias: 'Candlelights off'
+  trigger:
+    platform: time
+    at: '22:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.candlelight
+

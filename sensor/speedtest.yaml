@@ -1,0 +1,18 @@
+- platform: speedtest
+  minute:
+    - 0
+    - 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: swap_use_percent
+    - type: network_in
+    - type: network_out
+    - type: processor_use
+    - type: since_last_boot

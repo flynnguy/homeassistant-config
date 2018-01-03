@@ -1,0 +1,8 @@
+- platform: template
+  sensors:
+    furnace_heat:
+      friendly_name: Furnace heat
+      value_template: "{{ is_state('sensor.furnace_attribute_operation', 'heat') }}"
+    furnace_fan:
+      friendly_name: Furnace fan
+      value_template: "{{ is_state('sensor.furnace_attribute_fan', 'on') }}"

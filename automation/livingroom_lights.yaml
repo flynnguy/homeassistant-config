@@ -1,0 +1,18 @@
+- id: livingroom_on_pm
+  alias: 'Livingroom on PM'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-1:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.livingroom_lights
+
+- id: diningroom_off_pm
+  alias: 'Diningroom off PM'
+  trigger:
+    platform: time
+    at: '00:15:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.livingroom_lights

@@ -1,0 +1,20 @@
+### Lights
+switch.kitchen_switch:
+  friendly_name: Microwave Outlet Switch
+  icon: mdi:lamp
+switch.diningroom_switch:
+  friendly_name: Diningroom Candle
+  icon: mdi:candle
+switch.frontroom_switch:
+  friendly_name: Guestroom Candle
+  icon: mdi:candle
+light.mudroom_candlestick:
+  friendly_name: Mudroom Candle
+  icon: mdi:candle
+light.mud_room_north:
+  icon: mdi:lamp
+light.mud_room_south:
+  icon: mdi:lamp
+light.front_room_2:
+  friendly_name: Guest room light
+  icon: mdi:lamp
