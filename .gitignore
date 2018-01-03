@@ -24,3 +24,6 @@ zwcfg*
 zwscene.xml
 zones/*
 mqtt/passwd
+google_assistant/creds.data
+google_assistant/gactions
+google_assistant/project.json
