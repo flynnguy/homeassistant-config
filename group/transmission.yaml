@@ -1,0 +1,6 @@
+transmission:
+  name: Transmission
+  entities:
+    - sensor.transmission_down_speed
+    - sensor.transmission_status
+    - sensor.transmission_up_speed

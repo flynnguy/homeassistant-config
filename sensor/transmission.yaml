@@ -1,0 +1,8 @@
+- platform: transmission
+  host: !secret transmission_host
+  port: !secret transmission_port
+  name: Transmission
+  monitored_variables:
+    - 'current_status'
+    - 'download_speed'
+    - 'upload_speed'

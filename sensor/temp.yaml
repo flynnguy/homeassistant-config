@@ -1,0 +1,49 @@
+- platform: mqtt
+  name: Mudroom Temperature
+  state_topic: homeassistant/mudroom/temp
+  qos: 0
+  unit_of_measurement: "°F" 
+
+- platform: mqtt
+  name: Bedroom Temperature
+  state_topic: homeassistant/bedroom/temp
+  qos: 0
+  unit_of_measurement: "°F" 
+
+- platform: mqtt
+  name: Bedroom Humidity
+  state_topic: homeassistant/bedroom/hum
+  qos: 0
+  unit_of_measurement: "%"
+
+- platform: mqtt
+  name: Livingroom Temperature
+  state_topic: homeassistant/livingroom/temp
+  qos: 0
+  unit_of_measurement: "°F" 
+
+- platform: mqtt
+  name: Livingroom Humidity
+  state_topic: homeassistant/livingroom/hum
+  qos: 0
+  unit_of_measurement: "%"
+
+- platform: template
+  sensors:
+    furnace_attribute_mode:
+      friendly_name: "Furnance mode"
+      entity_id: climate.dublin
+      value_template: "{{ states.climate.dublin.attributes.operation_mode }}"
+    furnace_attribute_operation:
+      friendly_name: "Furnance operation"
+      entity_id: climate.dublin
+      value_template: "{{ states.climate.dublin.attributes.operation }}"
+    furnace_attribute_fan:
+      friendly_name: "Furnance fan"
+      entity_id: climate.dublin
+      value_template: "{{ states.climate.dublin.attributes.fan }}"
+    furnace_attribute_vacation:
+      friendly_name: "Furnance Vacation Mode"
+      entity_id: climate.dublin
+      value_template: "{{ states.climate.dublin.attributes.away_mode }}"
+
