@@ -1,0 +1,17 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.darksky_weather_data
+    - group.environment_data
+    - camera.bos
+    - group.locator
+    - group.transmission
+    - group.guestroom
+    - group.bedroom
+    - group.kitchen
+    - group.diningroom
+    - group.bitcoin
+    - group.pihole
+    - group.all_automations
+    - group.candlelight

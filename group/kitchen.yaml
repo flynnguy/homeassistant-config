@@ -1,0 +1,28 @@
+#### VIEWS
+kitchen_view:
+  name: Kitchen
+  view: yes
+  entities:
+    - group.kitchen
+    - group.kitchen_automation
+    - group.kitchen_media
+
+#### Groups
+kitchen:
+  name: Kitchen
+  entities:
+    - sensor.kitchen_temperature
+    - binary_sensor.kitchen_occupancy
+    - switch.kitchen_switch
+
+kitchen_automation:
+  name: Kitchen Automations
+  entities:
+    - automation.kitchen_light_off_in_the_am
+    - automation.kitchen_light_on_before_sunset
+
+kitchen_media:
+  name: Kitchen Media
+  entities:
+    - media_player.kitchen
+    - media_player.kitchen_home

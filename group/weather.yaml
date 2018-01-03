@@ -1,0 +1,54 @@
+#### VIEWS
+weather_view:
+  name: Weather
+  view: yes
+  entities:
+    - group.darksky_weather_data
+    - group.environment_data
+    - camera.bos
+
+
+#### Groups
+environment_data:
+  name: Environment
+  entities:
+    - sun.sun
+    - weather.dublin
+    - climate.dublin
+    - sensor.dublin_temperature
+    - sensor.dublin_humidity
+    - binary_sensor.dublin_occupancy
+    - binary_sensor.kitchen_occupancy
+    - sensor.kitchen_temperature
+    - binary_sensor.aurora_visibility
+    # - binary_sensor.iss
+darksky_weather_data:
+  name: Weather forecast
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_high_temperature_1
+    - sensor.dark_sky_daily_high_temperature_2
+    - sensor.dark_sky_daily_high_temperature_3
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_daily_low_temperature_1
+    - sensor.dark_sky_daily_low_temperature_2
+    - sensor.dark_sky_daily_low_temperature_3
+    - sensor.dark_sky_dew_point
+    - sensor.dark_sky_dew_point_1
+    - sensor.dark_sky_dew_point_2
+    - sensor.dark_sky_dew_point_3
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_1
+    - sensor.dark_sky_precip_2
+    - sensor.dark_sky_precip_3
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_humidity_1
+    - sensor.dark_sky_humidity_2
+    - sensor.dark_sky_humidity_3
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_cloud_coverage_1
+    - sensor.dark_sky_cloud_coverage_2
+    - sensor.dark_sky_cloud_coverage_3

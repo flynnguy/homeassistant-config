@@ -1,0 +1,41 @@
+#### VIEWS
+diningroom_view:
+  name: Diningroom
+  view: yes
+  entities:
+    - group.diningroom
+    - group.diningroom_automations
+    - group.diningroom_weather
+    - group.diningroom_media
+
+#### Groups
+diningroom:
+  name: Diningroom
+  entities:
+    - light.dining_room
+    - switch.diningroom_switch
+
+diningroom_automations:
+  name: Diningroom Automations
+  entities:
+    - automation.diningroom_off_am
+    - automation.diningroom_off_pm
+    - automation.diningroom_on_am
+    - automation.diningroom_on_pm
+    - automation.candlelights_on_around_sunset
+    - automation.candlelights_off
+
+diningroom_media:
+  name: Diningroom Media
+  entities:
+    - media_player.dining_room
+
+diningroom_weather:
+  name: Diningroom temperature
+  entities:
+    - sensor.dublin_temperature
+    - sensor.dublin_humidity
+    - sensor.furnace_attribute_fan
+    - sensor.furnace_attribute_mode
+    - sensor.furnace_attribute_operation
+    - sensor.furnace_attribute_vacation

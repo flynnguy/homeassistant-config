@@ -1,0 +1,5 @@
+candlelight:
+  name: Candlelight
+  entities:
+    - switch.frontroom_switch
+    - switch.diningroom_switch

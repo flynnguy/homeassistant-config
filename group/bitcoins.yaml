@@ -1,0 +1,7 @@
+bitcoin:
+  name: Bitcoin
+  entities:
+    - sensor.bitcoin_exchange_rate_1_btc
+    - sensor.bitcoin_market_price
+    - sensor.bitcoin_no_of_transactions
+    - sensor.bitcoin_total

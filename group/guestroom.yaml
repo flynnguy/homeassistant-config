@@ -1,0 +1,21 @@
+#### VIEWS
+guestroom_view:
+  name: Guestroom
+  view: yes
+  entities:
+    - group.guestroom
+    - group.guestroom_automations
+
+#### Groups
+guestroom:
+  name: Guestroom
+  entities:
+          #- light.front_room
+    - light.front_room_white
+    - switch.frontroom_switch
+
+guestroom_automations:
+  name: Guestroom Automations
+  entities:
+    - automation.candlelights_on_around_sunset
+    - automation.candlelights_off

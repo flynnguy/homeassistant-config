@@ -1,0 +1,26 @@
+#### VIEWS
+mudroom_view:
+  name: Mudroom
+  view: yes
+  entities:
+    - group.all_mudroom_lights
+    - group.mudroom_weather
+
+#### Groups
+all_mudroom_lights:
+  name: Mudroom
+  entities:
+    - light.mud_room_north
+    - light.mud_room_south
+    - light.mudroom_candlestick
+
+some_mudroom_lights:
+  name: Mudroom
+  entities:
+    - light.mud_room_north
+    - light.mud_room_south
+
+mudroom_weather:
+  name: Mudroom Temp Data
+  entities:
+    - sensor.mudroom_temperature

@@ -1,0 +1,25 @@
+#### VIEWS
+livingroom_view:
+  name: Livingroom
+  view: yes
+  entities:
+    - group.livingroom_lights
+    - group.livingroom_weather
+
+#### Groups
+livingroom_lights:
+  name: Livingroom Lights
+  entities:
+    - light.living_room
+    - light.living_room_by_chris
+    - light.living_room_by_computers
+    - light.living_room_by_heater
+    - light.living_room_by_nicole
+    - light.living_room_piano
+    - light.hue_color_light_by_bar
+
+livingroom_weather:
+  name: Livingroom temperature
+  entities:
+    - sensor.livingroom_humidity
+    - sensor.livingroom_temperature

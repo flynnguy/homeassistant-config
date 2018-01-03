@@ -1,0 +1,11 @@
+system_stats:
+  name: System Stats
+  entities:
+    - sensor.cpu_speed
+    - sensor.cpu_used
+    - sensor.swap_used
+    - sensor.disk_used_home
+    - sensor.ram_available
+    - sensor.received
+    - sensor.sent
+    - sensor.since_last_boot

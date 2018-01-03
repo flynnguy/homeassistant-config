@@ -1,0 +1,7 @@
+media:
+  name: Media Players
+  view: yes
+  entities:
+    - media_player.dining_room
+    - media_player.kitchen
+    - media_player.master_bedroom

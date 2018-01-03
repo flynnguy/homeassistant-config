@@ -1,0 +1,31 @@
+#### VIEWS
+bedroom_view:
+  name: Bedroom
+  view: yes
+  entities:
+    - group.bedroom
+    - group.bedroom_media
+    - group.bedroom_weather
+
+#### Groups
+bedroom:
+  name: Bedroom
+  entities:
+    - light.bedroom
+    - light.chris_nightstand
+    - light.nicole_nightstand
+    - light.hue_color_light_1
+    - light.hue_color_light_2
+    - switch.flux
+
+bedroom_weather:
+  name: Bedroom Temperature
+  entities:
+    - sensor.bedroom_humidity
+    - sensor.bedroom_temperature
+
+bedroom_media:
+  name: Bedroom media
+  entities:
+    - media_player.master_bedroom
+    - media_player.bedroom
