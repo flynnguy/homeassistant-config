@@ -1,0 +1,19 @@
+AppDaemon:
+  logfile: STDOUT
+  errorfile: STDERR
+  logsize: 100000
+  log_generations: 3
+  threads: 10
+  api_port: 5000
+# secrets.yaml needs to be in appdaemon directory, not the one used for HA
+  api_key: !secret http_password
+  api_ssl_certificate: /var/certs/fullchain.pem
+  api_ssl_key: /var/certs/privkey.pem
+HASS:
+  ha_url: !secret full_url
+  ha_key: !secret http_password
+
+HADashboard:
+  dash_url: !secret dash_url
+  dash_ssl_certificate: /var/certs/fullchain.pem 
+  dash_ssl_key: /var/certs/privkey.pem

@@ -1,0 +1,31 @@
+weather_frame:
+  widget_type: iframe
+  title: Radar
+  refresh: 300
+  frame_style: ""
+  img_list: 
+    - https://icons.wxug.com/data/weather-maps/radar/united-states/hartford-connecticut-region-current-radar-animation.gif
+
+yankee_cam:
+  widget_type: iframe
+  title: Yankee Magazine
+  refresh: 60
+  frame_style: ""
+  img_list:
+    - http://s3.amazonaws.com/almanac/webcam/image.jpg
+    - https://s3.amazonaws.com/almanac/treecam/image-ne-branded.jpg
+
+bos_radar:
+  widget_type: iframe
+  title: BOS
+  refresh: 300
+  frame_style: ""
+  img_list:
+    - https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=GYX&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=1&smooth=1&rand=25202588&lat=0&lon=0&label=you
+      
+layout:
+    - weather_frame(3x3), sensor.dark_sky_minutely_summary(2x1), sensor.dark_sky_hourly_summary(2x1)
+    - sensor.dark_sky_daily_summary(2x1), sensor.dark_sky_pressure(2x1)
+    - sensor.dark_sky_temperature, sensor.dark_sky_apparent_temperature, sensor.dark_sky_nearest_storm_distance,  sensor.dark_sky_nearest_storm_bearing
+    - bos_radar(2x2), yankee_cam(2x2), sensor.dark_sky_wind_speed(2x1), sensor.dark_sky_wind_bearing, sensor.dark_sky_humidity
+    - sensor.dark_sky_visibility, sensor.dark_sky_precip_probability, sensor.dark_sky_precip_intensity(2x1)

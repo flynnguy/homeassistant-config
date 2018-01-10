@@ -1,0 +1,28 @@
+bedroom_temperature:
+    widget_type: sensor
+    title: Bedroom Temperature
+    units: "&deg;F"
+    precision: 0
+    entity: sensor.bedroom_temperature
+
+bedroom_humidity:
+    widget_type: sensor
+    title: Bedroom Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.bedroom_humidity
+
+diningroom_temperature:
+    widget_type: sensor
+    title: Diningroom Temperature
+    units: "&deg;F"
+    precision: 0
+    entity: sensor.dublin_temperature
+
+diningroom_humidity:
+    widget_type: sensor
+    title: Diningroom Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.dublin_humidity
+
