@@ -5,6 +5,8 @@ default_view:
     - group.darksky_weather_data
     - group.environment_data
     - camera.bos
+    - camera.yankee_magazine
+    - camera.yankee_magazine_backyard
     - group.locator
     - group.transmission
     - group.guestroom

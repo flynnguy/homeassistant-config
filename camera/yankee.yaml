@@ -1,0 +1,7 @@
+- platform: generic
+  still_image_url: http://s3.amazonaws.com/almanac/webcam/image.jpg
+  name: Yankee Magazine
+
+- platform: generic
+  still_image_url: https://s3.amazonaws.com/almanac/treecam/image-ne-branded.jpg
+  name: Yankee Magazine Backyard
