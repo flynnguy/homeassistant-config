@@ -45,6 +45,7 @@ camera: !include_dir_merge_list camera
 device_tracker: !include_dir_merge_list device_tracker
 zone: !include_dir_merge_list zones
 remember_the_milk: !include platform/rtm.yaml
+google: !include google/calendar.yaml
 #google_assistant: !include google_assistant/google.yaml
 influxdb: !include influxdb/influxdb.yaml
 
