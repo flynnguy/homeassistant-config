@@ -28,22 +28,23 @@
   qos: 0
   unit_of_measurement: "%"
 
-- platform: template
-  sensors:
-    furnace_attribute_mode:
-      friendly_name: "Furnance mode"
-      entity_id: climate.dublin
-      value_template: "{{ states.climate.dublin.attributes.operation_mode }}"
-    furnace_attribute_operation:
-      friendly_name: "Furnance operation"
-      entity_id: climate.dublin
-      value_template: "{{ states.climate.dublin.attributes.operation }}"
-    furnace_attribute_fan:
-      friendly_name: "Furnance fan"
-      entity_id: climate.dublin
-      value_template: "{{ states.climate.dublin.attributes.fan }}"
-    furnace_attribute_vacation:
-      friendly_name: "Furnance Vacation Mode"
-      entity_id: climate.dublin
-      value_template: "{{ states.climate.dublin.attributes.away_mode }}"
+# The following has been deprecated...
+# - platform: template
+#   sensors:
+#     furnace_attribute_mode:
+#       friendly_name: "Furnance mode"
+#       entity_id: climate.dublin
+#       value_template: "{{ states.climate.dublin.attributes.operation_mode }}"
+#     furnace_attribute_operation:
+#       friendly_name: "Furnance operation"
+#       entity_id: climate.dublin
+#       value_template: "{{ states.climate.dublin.attributes.operation }}"
+#     furnace_attribute_fan:
+#       friendly_name: "Furnance fan"
+#       entity_id: climate.dublin
+#       value_template: "{{ states.climate.dublin.attributes.fan }}"
+#     furnace_attribute_vacation:
+#       friendly_name: "Furnance Vacation Mode"
+#       entity_id: climate.dublin
+#       value_template: "{{ states.climate.dublin.attributes.away_mode }}"
 
