@@ -5,6 +5,7 @@ mudroom_view:
   entities:
     - group.all_mudroom_lights
     - group.mudroom_weather
+    - group.mudroom_nest
 
 #### Groups
 all_mudroom_lights:
@@ -24,3 +25,10 @@ mudroom_weather:
   name: Mudroom Temp Data
   entities:
     - sensor.mudroom_temperature
+
+mudroom_nest:
+  name: Nest Camera
+  entities:
+    - binary_sensor.entryway_camera_motion_detected
+    - binary_sensor.entryway_camera_person_detected
+    - camera.entryway
