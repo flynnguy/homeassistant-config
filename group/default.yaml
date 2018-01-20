@@ -7,6 +7,7 @@ default_view:
     - camera.bos
     - camera.yankee_magazine
     - camera.yankee_magazine_backyard
+    - camera.entryway
     - group.locator
     - group.transmission
     - group.guestroom
