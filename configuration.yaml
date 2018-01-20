@@ -48,6 +48,9 @@ remember_the_milk: !include platform/rtm.yaml
 google: !include google/calendar.yaml
 #google_assistant: !include google_assistant/google.yaml
 influxdb: !include influxdb/influxdb.yaml
+octoprint: !include octoprint/octoprint.yaml
+feedreader: !include feedreader/feedreader.yaml
 
 # Using floorplan_config.yaml to differentiate between floorplan.yaml
 panel_custom: !include floorplan/floorplan_config.yaml
+nest: !include nest/nest.yaml
