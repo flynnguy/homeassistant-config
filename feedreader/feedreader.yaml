@@ -1,0 +1,2 @@
+urls:
+  - http://127.0.0.1:8181/#?user=homeassistant&repo=raspberrypi3-homeassistant&exclude=latest
