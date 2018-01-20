@@ -6,11 +6,14 @@ bedroom_temperature:
     entity: sensor.bedroom_temperature
 
 bedroom_humidity:
-    widget_type: sensor
     title: Bedroom Humidity
-    units: "%"
-    precision: 0
+    widget_type: gauge
     entity: sensor.bedroom_humidity
+    units: "%"
+    # high_color: 55
+    # med_color: 45
+    min: 0
+    max: 100
 
 diningroom_temperature:
     widget_type: sensor

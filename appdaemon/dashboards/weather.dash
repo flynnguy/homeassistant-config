@@ -10,3 +10,4 @@ layout:
     - include: weather_panel
     - include: temp_sensors_panel
     - diningroom_temperature, diningroom_humidity, sensor.kitchen_temperature, sensor.mudroom_temperature, bedroom_temperature, bedroom_humidity, sensor.livingroom_temperature, sensor.livingroom_humidity
+    - include: bottom_panel
