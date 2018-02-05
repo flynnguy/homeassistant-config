@@ -28,6 +28,25 @@
   qos: 0
   unit_of_measurement: "%"
 
+- platform: template
+  sensors:
+    darksky_temp:
+      unit_of_measurement: "°F" 
+      value_template: "{{ states.weather.dark_sky.attributes.temperature }}"
+    darksky_hum:
+      unit_of_measurement: "%"
+      value_template: "{{ states.weather.dark_sky.attributes.humidity }}"
+    darksky_pressure:
+      unit_of_measurement: "mb"
+      value_template: "{{ states.weather.dark_sky.attributes.pressure }}"
+    darksky_wind:
+      unit_of_measurement: "mph"
+      value_template: "{{ states.weather.dark_sky.attributes.wind_speed }}"
+    darksky_hourly_forecast:
+      value_template: "{{ states.weather.dark_sky.attributes.hourly_forecast_summary }}"
+    darksky_daily_forecast:
+      value_template: "{{ states.weather.dark_sky.attributes.daily_forecast_summary }}"
+
 # The following has been deprecated...
 # - platform: template
 #   sensors:
