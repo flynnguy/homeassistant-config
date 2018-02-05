@@ -54,3 +54,6 @@ feedreader: !include feedreader/feedreader.yaml
 # Using floorplan_config.yaml to differentiate between floorplan.yaml
 panel_custom: !include floorplan/floorplan_config.yaml
 nest: !include nest/nest.yaml
+weather: !include weather/darksky.yaml
+telegram_bot: !include telegram/bot.yaml
+coinbase: !include coinbase/coinbase.yaml
