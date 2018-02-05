@@ -11,6 +11,7 @@ guestroom:
   name: Guestroom
   entities:
           #- light.front_room
+    - switch.front_porch_switch
     - light.front_room_white
     - switch.frontroom_switch
 
