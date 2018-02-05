@@ -6,3 +6,12 @@
     furnace_fan:
       friendly_name: Furnace fan
       value_template: "{{ is_state('sensor.furnace_attribute_fan', 'on') }}"
+
+    pto:
+      friendly_name: Vacation Day
+      value_template: >-
+        {{ is_state_attr('calendar.work', 'message', 'Vacation Day') }}
+
+#{{ is_state_attr('calendar.work', 'message', 'Vacation Day') }}
+#{% if 'Vacation Day' in states.calendar.work.attributes.message %}on{% else %}off{% endif %}
+#{% if '#PTO' in states.calendar.work.attributes.description %}on{% else %}off{% endif %}
