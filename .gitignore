@@ -33,3 +33,4 @@ google_calendars.yaml
 .google.token
 docker-compose.yaml
 feedreader.pickle
+duckdns/duck.sh
