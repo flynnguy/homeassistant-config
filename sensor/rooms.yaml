@@ -1,0 +1,14 @@
+
+- platform: mqtt_room
+  device_id: e0981a9ddd46
+  name: 'Nicole-watch'
+  state_topic: 'room_presence'
+  timeout: 5
+  away_timeout: 60
+- platform: mqtt_room
+  device_id: 6f2be9d06d50
+  name: 'something'
+  state_topic: 'room_presence'
+  timeout: 5
+  away_timeout: 60
+
