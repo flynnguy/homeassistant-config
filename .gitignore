@@ -31,6 +31,8 @@ google_assistant/gactions
 google_assistant/project.json
 google_calendars.yaml
 .google.token
+.storage/
 docker-compose.yaml
 feedreader.pickle
+duckdns/duck.log
 duckdns/duck.sh
