@@ -1,0 +1,6 @@
+#### Groups
+locator:
+  name: Locator
+  entities:
+    - device_tracker.nicolepixel
+    - sensor.nicolewatch
