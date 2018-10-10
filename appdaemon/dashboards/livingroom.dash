@@ -1,0 +1,24 @@
+title: Livingroom
+widget_dimensions: [115, 115]
+widget_size: [1, 1]
+widget_margins: [4, 4]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - include: temp_sensors_panel
+    # - weather(2x2), light.chris_nightstand, light.nicole_nightstand, light.hue_color_light_1, light.hue_color_light_2, switch.flux, light.bedroom
+    # - clock(2x1), bedroom_temperature(1x1), bedroom_humidity
+    - include: light_panel
+    - include: bottom_panel
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+
+clock:
+    widget_type: clock
+

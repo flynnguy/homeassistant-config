@@ -1,0 +1,24 @@
+title: Main Panel
+widget_dimensions: [115, 115]
+widget_size: [1, 1]
+widget_margins: [4, 4]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - include: temp_sensors_panel
+    - weather(2x2), driveway_cam(3x2)
+    - sensor.mudroom_temperature
+    - include: light_panel
+    - include: bottom_panel
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+
+driveway_cam:
+    widget_type: camera
+    entity_picture: https://flynnguy.duckdns.org:8123/api/camera_proxy/camera.entryway?token=54da88b92405a15327504fa9945cb439007d3872501451826c97255f149cadd5&api_password=O8r3w7diw

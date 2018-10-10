@@ -1,8 +1,0 @@
-- platform: flux
-  lights:
-    - light.chris_nightstand
-    - light.nicole_nightstand
-    - light.hue_color_light_1
-    - light.hue_color_light_2
-  stop_time: '23:30'
-  disable_brightness_adjust: True

@@ -1,8 +1,0 @@
-octoprint:
-  name: Octoprint
-  entities:
-    - sensor.octoprint_actual_bed_temp
-    - sensor.octoprint_current_state
-    - sensor.octoprint_job_percentage
-    - sensor.octoprint_target_bed_temp
-

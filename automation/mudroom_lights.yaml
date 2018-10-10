@@ -31,37 +31,58 @@
     entity_id: group.all_mudroom_lights
 
 - id: mudroom_lights_on_am
-  alias: 'mudroom lights on AM'
+  alias: 'mudroom lights on AM for work'
   trigger:
     platform: time
     at: '05:15:00'
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - fri
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - fri
+      - condition: state
+        entity_id: 'binary_sensor.pto'
+        state: 'off'
+      - condition: sun
+        before: sunrise
+        before_offset: "-00:30:00"
   action:
     service: homeassistant.turn_on
-    entity_id: light.mudroom_candlestick
+    entity_id: 
+      - light.mudroom_candlestick
+      - light.hue_color_light_1
+      - light.hue_color_light_2
+      - light.hue_color_light_3
     data:
       brightness_pct: 70
 
 - id: mudroom_lights_off_am
-  alias: 'mudroom lights off AM'
+  alias: 'mudroom lights off AM for work'
   trigger:
     platform: time
     at: '05:40:00'
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - fri
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - fri
+      - condition: state
+        entity_id: 'binary_sensor.pto'
+        state: 'off'
   action:
     service: homeassistant.turn_off
-    entity_id: light.mudroom_candlestick
+    entity_id:
+      - light.mudroom_candlestick
+      - light.hue_color_light_1
+      - light.hue_color_light_2
+      - light.hue_color_light_3
     data:
       transition: 300

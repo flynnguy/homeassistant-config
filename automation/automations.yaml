@@ -8,12 +8,29 @@
     service: homeassistant.turn_off
     entity_id: group.bedroom
 
-- id: flux_bedroom
-  alias: Flux bedroom lights
+# - id: flux_bedroom_on
+#   alias: Flux bedroom lights On
+#   trigger:
+#     - platform: state
+#       entity_id: light.chris_nightstand, light.nicole_nightstand, light.hue_color_light_1, light.hue_color_light_2
+#       to: "on"
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: switch.flux
+# - id: flux_bedroom_off
+#   alias: Flux bedroom lights Off
+#   trigger:
+#     - platform: state
+#       entity_id: light.chris_nightstand, light.nicole_nightstand, light.hue_color_light_1, light.hue_color_light_2
+#       to: "off"
+#   action:
+#     service: homeassistant.turn_off
+#     entity_id: switch.flux
+- id: porch_lights_off
+  alias: Front porch lights off PM
   trigger:
-    - platform: state
-      entity_id: light.chris_nightstand, light.nicole_nightstand, light.hue_color_light_1, light.hue_color_light_2
-      to: "on"
+    - platform: time
+      at: '00:30'
   action:
-    service: homeassistant.turn_on
-    entity_id: switch.flux
+    service: homeassistant.turn_off
+    entity_id: switch.front_porch_switch

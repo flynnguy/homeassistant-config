@@ -1,0 +1,32 @@
+load_main_panel:
+    widget_type: navigate
+    title: Main
+    icon_inactive: fa-home
+    dashboard: main
+
+load_office_panel:
+    widget_type: navigate
+    title: Bedroom
+    icon_inactive: fa-bed
+    dashboard: bedroom
+
+load_weather:
+    widget_type: navigate
+    title: Weather
+    icon_inactive: fa-cloud
+    dashboard: weather
+
+load_rooms:
+    widget_type: navigate
+    title: Rooms
+    icon_inactive: fa-bed
+    dashboard: Rooms
+
+load_livingroom:
+    widget_type: navigate
+    title: Livingroom
+    icon_inactive: mdi-sofa
+    dashboard: livingroom
+    
+layout: 
+  - load_main_panel(2x1), load_office_panel(2x1), load_livingroom(2x1), load_weather(2x1)

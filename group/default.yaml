@@ -2,6 +2,7 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
+    # - weather.dark_sky
     - group.darksky_weather_data
     - group.environment_data
     - camera.bos

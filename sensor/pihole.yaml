@@ -1,1 +1,2 @@
 - platform: pi_hole
+  host: 10.0.0.35

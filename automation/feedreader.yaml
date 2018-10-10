@@ -1,0 +1,22 @@
+- alias: Send notification of RSS feed title when updated
+  id: feedreader-persistent-notification
+  trigger:
+    platform: event
+    event_type: feedreader
+  action:
+    service: persistent_notification.create
+    data_template:
+      title: "New RSS Entry"
+      message: "{{ trigger.event.data.title }} - {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p %d%b%Y', true) }}"
+      notification_id: "{{ trigger.event.data.title }}"
+
+- id: feedreader-notification
+  alias: Notify RSS Updates
+  trigger:
+    platform: event
+    event_type: feedreader
+  action:
+    service: notify.HomeAssistant
+    data:
+      message: "{{ trigger.event.data.title }}"
+

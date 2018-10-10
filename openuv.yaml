@@ -1,0 +1,2 @@
+api_key: !secret openuv_api_key
+scan_interval: 11200

@@ -3,7 +3,6 @@ applications_view:
   name: Applications
   view: yes
   entities:
-    - group.octoprint
     - group.speedtest
     - group.bitcoin
     - group.pihole

@@ -1,0 +1,36 @@
+# If someone is home, turn on the bedroom lights on 30 min after sunset
+- id: bedroom_lights_on_pm
+  alias: 'Bedroom lights on PM'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-01:00:00'
+  action:
+    service: light.turn_on
+    entity_id: light.bedroom
+
+- id: mood_lighting
+  alias: Mood lighting
+  trigger:
+    platform: mqtt
+    topic: homeassistant/tasker/moodlight
+    payload: 'on'
+  action:
+    service: light.turn_on
+    entity_id: group.bedroom
+    data:
+      brightness: 60
+      rgb_color: [120, 60, 60]
+
+- id: bright_light
+  alias: Bright Light
+  trigger:
+    platform: mqtt
+    topic: homeassistant/tasker/brightlight
+    payload: 'on'
+  action:
+    service: light.turn_on
+    entity_id: group.bedroom
+    data:
+      brightness: 255
+      rgb_color: [255, 255, 255]

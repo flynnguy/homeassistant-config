@@ -5,6 +5,19 @@
     platform: sun
     event: sunset
     offset: '-01:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: 'binary_sensor.pto'
+        state: 'off'
   action:
     service: notify.HomeAssistant
     data:
@@ -30,3 +43,26 @@
     service: notify.HomeAssistant
     data:
       message: Dryer finished
+
+# - id: sample_telegram
+#   alias: Sample telegram notification
+#   trigger:
+#     platform: time
+#     at: '12:50:00'
+#   condition:
+#     condition: time
+#     weekday:
+#       - mon
+#       - tue
+#       - wed
+#       - thu
+#       - fri
+#   action:
+#     service: notify.jarvis
+#     data:
+#       title: '*Send a message*'
+#       message: 'This is a *formatted* message'
+#       data:
+#         inline_keyboard:
+#           - 'Task 1:/command1, Task 2:/command2'
+#           - 'Task 3:/command3, Task 4:/command4'

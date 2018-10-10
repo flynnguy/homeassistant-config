@@ -7,17 +7,17 @@
     - total_btc
     - market_price_usd
 
-- platform: coinmarketcap
-  currency: Ethereum
-- platform: coinmarketcap
-  currency: Litecoin
-- platform: coinmarketcap
-  currency: Monero
-- platform: coinmarketcap
-  currency: Bitcoin Cash
-- platform: coinmarketcap
-  currency: Dash
-- platform: coinmarketcap
-  currency: Zcash
-- platform: coinmarketcap
-  currency: Golem
+# - platform: coinmarketcap
+#   currency: Ethereum
+# - platform: coinmarketcap
+#   currency: Litecoin
+# - platform: coinmarketcap
+#   currency: Monero
+# - platform: coinmarketcap
+#   currency: Bitcoin Cash
+# - platform: coinmarketcap
+#   currency: Dash
+# - platform: coinmarketcap
+#   currency: Zcash
+# - platform: coinmarketcap
+#   currency: Golem

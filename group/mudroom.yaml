@@ -14,12 +14,14 @@ all_mudroom_lights:
     - light.mud_room_north
     - light.mud_room_south
     - light.mudroom_candlestick
+    - light.hue_color_light_3
 
 some_mudroom_lights:
   name: Mudroom
   entities:
     - light.mud_room_north
     - light.mud_room_south
+    - light.hue_color_light_3
 
 mudroom_weather:
   name: Mudroom Temp Data

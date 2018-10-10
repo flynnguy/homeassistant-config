@@ -1,0 +1,71 @@
+- id: telegram_ping_pong
+  alias: Telegram Ping Pong
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/ping'
+  action:
+    service: notify.jarvis
+    data:
+      message: pong
+
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/start'
+  action:
+    service: notify.jarvis
+    data:
+      message: 'commands'
+      data:
+        keyboard:
+          - '/lights'
+
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/lights'
+  action:
+    service: notify.jarvis
+    data:
+      message: 'light commands'
+      data:
+        keyboard:
+          - '/porch_on, /porch_off'
+          - '/bedroom_on, /bedroom_off'
+
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/porch_on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.front_porch_switch
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/porch_off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.front_porch_switch
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/bedroom_on'
+  action:
+    - service: light.turn_on
+      entity_id: light.bedroom
+- trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/bedroom_off'
+  action:
+    - service: light.turn_off
+      entity_id: light.bedroom

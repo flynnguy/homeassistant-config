@@ -1,0 +1,48 @@
+bedroom_lights:
+    widget_type: light
+    entity: light.bedroom
+    title: Bedroom Lights
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+    on_attributes:
+      brightness: 255
+
+mudroom_lights:
+    widget_type: light
+    entity: light.mudroom
+    title: Mudroom Lights
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+    on_attributes:
+      brightness: 255
+
+diningroom_lights:
+    widget_type: light
+    entity: light.dining_room
+    title: Diningroom Lights
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+    on_attributes:
+      brightness: 255
+
+frontroom_lights:
+    widget_type: light
+    entity: light.front_room
+    title: Frontroom Lights
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+    on_attributes:
+      brightness: 255
+
+livingroom_lights:
+    widget_type: light
+    entity: light.living_room
+    title: Livingroom Lights
+    icon_on: mdi-lightbulb-on
+    icon_off: mdi-lightbulb-outline
+    on_attributes:
+      brightness: 255
+
+
+layout:
+  - bedroom_lights(1x1), livingroom_lights, mudroom_lights, diningroom_lights, frontroom_lights

@@ -13,6 +13,7 @@ diningroom:
   name: Diningroom
   entities:
     - light.dining_room
+    - light.dining_room_window
     - switch.diningroom_switch
     - light.dr_switch_level
 

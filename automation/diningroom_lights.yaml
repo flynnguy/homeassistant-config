@@ -3,7 +3,7 @@
   alias: 'Diningroom on AM'
   trigger:
     platform: time
-    at: '6:00:00'
+    at: '6:05:00'
   condition:
     condition: time
     weekday:
@@ -21,7 +21,7 @@
   alias: 'Diningroom off AM'
   trigger:
     platform: time
-    at: '8:15:00'
+    at: '6:45:00'
   condition:
     condition: time
     weekday:
@@ -41,6 +41,9 @@
     platform: sun
     event: sunset
     offset: '-1:00:00'
+  condition:
+    - condition: time
+      before: '20:00:00'
   action:
     service: homeassistant.turn_on
     entity_id: light.dining_room
