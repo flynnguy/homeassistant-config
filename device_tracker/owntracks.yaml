@@ -1,3 +1,0 @@
-- platform: owntracks
-  max_gps_accuracy: 100
-  waypoints: True

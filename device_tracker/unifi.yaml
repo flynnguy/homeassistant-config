@@ -1,0 +1,20 @@
+- platform: unifi
+  host: !secret unifi_host
+  username: !secret unifi_user
+  password: !secret unifi_pass
+  verify_ssl: false
+  track_new_devices: yes
+  site_id: !secret unifi_site_id
+  monitored_conditions:
+    - _id
+    - user_id
+    - ip
+    - name
+    - mac
+    - is_guest
+    - is_wired
+    - last_seen
+    - vlan
+    - tx_power
+    - tx_bytes
+    - tx_bytes-r
